@@ -24,6 +24,14 @@
       .ani-slide { animation: slideIn 700ms ease both; }
       .ani-float { animation: floatY 4s ease-in-out infinite; }
       .glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); }
+      /* Premium skill pills and cards */
+      .skill-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); padding: 1.25rem; border-radius: 1rem; }
+      .skill-category { color: var(--muted); font-weight:700; margin-bottom:0.75rem; font-size:1rem; }
+      .skill-list { display:flex; flex-wrap:wrap; gap:0.6rem; }
+      .skill-pill { display:inline-flex; align-items:center; gap:0.5rem; padding:0.5rem 0.9rem; border-radius:9999px; font-weight:700; color:#fff; background:linear-gradient(90deg, rgba(123,44,191,0.95), rgba(179,108,255,0.9)); box-shadow:0 8px 30px rgba(123,44,191,0.08); transition:transform .22s ease, box-shadow .22s ease, filter .22s ease; }
+      .skill-pill.secondary { background: linear-gradient(90deg, rgba(45,212,191,0.12), rgba(123,44,191,0.06)); color: #e6e6f0; border:1px solid rgba(255,255,255,0.02); box-shadow: inset 0 -6px 20px rgba(0,0,0,0.35); }
+      .skill-pill:hover { transform:translateY(-6px) scale(1.03); box-shadow:0 18px 40px rgba(123,44,191,0.14); filter:brightness(1.03); }
+      @media (max-width: 640px){ .skill-pill{ padding:0.45rem .75rem; font-size:0.9rem } }
     </style>
   </head>
   <body class="bg-gradient-to-b from-black via-gray-900 to-gray-950 text-gray-100 font-sans antialiased">
@@ -40,7 +48,7 @@
         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(123,44,191,0.9)] to-[rgba(199,125,255,0.8)] flex items-center justify-center text-white font-semibold">SP</div>
         <div>
           <div class="text-sm font-semibold">Sinchana P S</div>
-          <div class="text-xs text-[var(--muted)]">MERN · Web · AI</div>
+          <div class="text-xs text-[var(--muted)]">Devops · Communication · AI</div>
         </div>
       </div>
       <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
@@ -57,13 +65,13 @@
       <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-8">
         <div class="md:col-span-2 space-y-6 ani-fade">
           <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight">Sinchana P S</h1>
-            <div class="text-lg text-gray-300 mt-2">Computer Science Engineering student, MERN stack developer, and freelance engineer focused on building reliable, scalable web applications while exploring AI-driven interfaces. I prioritize clean architecture, readable code, and production-ready deployments that deliver real business value.</div>
+            <div class="text-lg text-gray-300 mt-2">Devops Intern with hands-on experience in Linux, Shell Scripting, AWS, Git, Docker, Terraform, Ansible and Jenkins. Passionate about cloud technologies, automation, building reliable and scalable systems while continuously learning Kubernetes.</div>
           <div class="flex flex-wrap gap-3">
             <a href="https://github.com/Sinchanaps03" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-[var(--accent)] text-white rounded-full shadow-md hover:scale-105 transition"> <i class="fab fa-github"></i> View GitHub</a>
             <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 bg-transparent border border-gray-700 text-gray-200 rounded-full hover:bg-gray-800 transition">View Projects</a>
           </div>
           <div class="mt-6 flex gap-4 text-sm text-gray-400">
-            <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gray-400"></i> Mangalore, Karnataka</div>
+            <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gray-400"></i> Madikeri, Coorg, Karnataka</div>
             <div class="flex items-center gap-2"><i class="fas fa-envelope text-gray-400"></i> <a class="text-gray-300 hover:underline" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></div>
           </div>
         </div>
@@ -72,7 +80,7 @@
           <div class="glass p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
             <img src="public/Profile.png" alt="profile" class="w-28 h-28 rounded-full object-cover ring-2 ring-[rgba(123,44,191,0.18)] mb-4">
             <div class="text-lg font-semibold">Sinchana P S</div>
-            <div class="text-sm text-gray-400">MERN Stack Developer & Freelancer</div>
+            <div class="text-sm text-gray-400">Devops Intern</div>
             <!-- experience bar removed as requested -->
             <div class="mt-5 flex gap-3">
               <a href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -82,45 +90,20 @@
         </aside>
       </section>
 
-      <!-- SKILLS -->
+      <!-- TRAINING / REPLACE SKILLS -->
       <section id="skills" class="mt-12 ani-fade">
-        <h2 class="font-serif text-2xl mb-4">Technical Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="glass p-5 rounded-xl shadow-sm">
-            <h3 class="text-sm text-gray-400 mb-3">Frontend</h3>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>React</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:85%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>Tailwind</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>TypeScript</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:75%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>JavaScript</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:78%"></div></div>
-            </div>
-          </div>
-          <div class="glass p-5 rounded-xl shadow-sm">
-            <h3 class="text-sm text-gray-400 mb-3">Backend & DB</h3>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>Node.js</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:82%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>Express.js</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>MongoDB / MySQL</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:78%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>Python</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
-            </div>
-          </div>
-          <div class="glass p-5 rounded-xl shadow-sm">
-            <h3 class="text-sm text-gray-400 mb-3">DevOps & Tools</h3>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>Docker</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:70%"></div></div>
-              <div class="flex items-center justify-between text-xs text-gray-300"><span>REST APIs</span></div>
-              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:88%"></div></div>
-            </div>
-          </div>
+        <h2 class="font-serif text-2xl mb-4">Internship</h2>
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold text-lg mb-2">QSpiders/JSpiders (A Unit of Test Yantra Software Solutions India Pvt Ltd) — <span class="text-sm text-gray-400">Feb 2026-Present</span></h3>
+          <ul class="list-disc pl-5 text-sm text-gray-300 space-y-2">
+            <li>Currently undergoing hands-on training in <strong>DevOps</strong> practices.</li>
+            <li>Working with <strong>Linux</strong> and <strong>Shell Scripting</strong> for system automation and task optimization.</li>
+            <li>Implementing version control workflows using <strong>Git</strong>.</li>
+            <li>Gaining cloud exposure in <strong>AWS</strong>.</li>
+            <li>Learning and applying Infrastructure as Code using <strong>Terraform</strong>.</li>
+            <li>Working with containerization tools including <strong>Docker</strong>.</li>
+            <li>Configuration management with <strong>Ansible</strong>.</li>
+          </ul>
         </div>
       </section>
 
@@ -128,6 +111,11 @@
       <section id="projects" class="mt-12 ani-slide">
         <h2 class="font-serif text-2xl mb-4">Selected Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Linux.jpeg" alt="Linux Automation Toolkit" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Linux Automation Toolkit using Shell Scripting</h4>
+            <p class="text-sm text-gray-400 mt-2">Developed a menu-driven shell scripting project to automate Linux administrative tasks such as user creation, file copying between directories, disk usage monitoring, and software installation. The tool simplifies repetitive system administration tasks through an interactive menu-based interface, improving efficiency and reducing manual effort using <strong>Linux</strong>, <strong>Bash/Shell Scripting</strong>, and automation techniques.</p>
+          </article>
           <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
             <img src="public/Echosketch.png" alt="Echosketch" class="w-full h-36 object-cover rounded-md mb-3">
             <h4 class="font-semibold">Echosketch — Voice to Visual</h4>
